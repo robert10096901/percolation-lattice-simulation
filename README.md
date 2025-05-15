@@ -1,25 +1,25 @@
 # Percolation Lattice Simulation
 
-This repository contains a Jupyter Notebook that estimates percolation thresholds using lattice structures in both 2D and 3D.
+This repository contains a Jupyter Notebook for estimating percolation thresholds in lattice-based systems using both regular and random structures in two and three dimensions.
 
 ## Contents
 
-- `Percolation_threshold_estimate.ipynb`: Main notebook that includes two separate simulation blocks:
-  1. **Standard Lattice Percolation** (supports both 2D and 3D structures)
-  2. **Random Lattice Percolation**
+- `Percolation_threshold_estimate.ipynb`: A unified notebook comprising two simulation modules:
+  1. Standard lattice percolation (2D and 3D)
+  2. Random lattice percolation based on spatial proximity
 
 ## Description
 
-The simulation uses Monte Carlo techniques to estimate percolation thresholds for lattices:
+This notebook implements Monte Carlo simulations to determine the percolation threshold, defined as the critical occupation probability at which a system transitions from a non-percolating to a percolating phase.
 
-- The **first part** of the notebook simulates traditional lattice systems, where the connectivity is regular (either in 2D or 3D).
-- The **second part** explores random lattice structures, where the connections are randomized.
+- In the **first module**, the simulation is based on regular 2D and 3D grid lattices with uniform connectivity. A breadth-first search (BFS) algorithm is used to detect spanning clusters.
+- In the **second module**, the system is modeled as a random geometric network. Nodes are placed randomly in space, and connectivity is defined by a threshold distance. Percolation is assessed through randomly disabling nodes and analyzing the resulting network.
 
-Each part outputs percolation probability plots and threshold estimates based on varying system sizes.
+Both modules generate percolation probability curves and identify the threshold value via interpolation.
 
 ## Requirements
 
-Make sure to install the following Python packages before running the notebook:
+To run the notebook, install the following Python packages:
 
 ```bash
-pip install numpy matplotlib scipy
+pip install numpy matplotlib scipy numba ipywidgets
