@@ -1,4 +1,4 @@
-# Percolation Lattice Simulation
+# Percolation threshold Simulation
 
 This repository contains a Jupyter Notebook for estimating percolation thresholds in lattice-based systems using both regular and random structures in two and three dimensions.
 
